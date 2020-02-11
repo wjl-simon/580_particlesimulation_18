@@ -4,25 +4,27 @@ public class Tick extends AbstractEvent
 {
     /**
      * Constrcutor
-     * @param time specifies the scheduled happen time
+     * @param time specifies the time (in ticks) for this tick
      */
     public Tick(double time)
     {
-        // TODO
         super(time);
-
     }
 
     /**
-     * 
+     * A tick is always valid
      */
     @Override
     public boolean isValid()
     {
-        // A tick is always valid
         return true;
     }
 
+    /**
+     * Making this event happen
+     * @param h is the activity that will occur when this event
+     * happens
+     */
     @Override
     public void happen(ParticleEventHandler h)
     {

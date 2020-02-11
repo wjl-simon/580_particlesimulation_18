@@ -2,14 +2,17 @@ package simulation;
 
 public abstract class AbstractEvent implements Event {
 
-    private final double scheduledTime;
+    // the scheduled time time (in ticks) for the happening
+    // of  this event
+    private final double scheduleTime;
 
     /**
      * Constructor for AbstractEvent.
+     * @param time specify the time (is in ticks) when this event 
+     * will happen
      */
     public AbstractEvent(double time) {
-        // TODO implement the constructor
-        scheduledTime = time; 
+        scheduleTime = time; 
     }
 
     /**
@@ -17,8 +20,7 @@ public abstract class AbstractEvent implements Event {
      */
     @Override
     public double time() {
-        // TODO implement this method
-        return scheduledTime;
+        return scheduleTime;
     }
 
     /**
